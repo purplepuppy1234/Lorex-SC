@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+  background-color: black;
+  color: aqua;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px aqua; }
+  to { text-shadow: 0 0 20px aqua, 0 0 30px cyan; }
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  background: black;
+  color: aqua;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 15px aqua;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background: aqua;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+#sourcecode {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background: aqua;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#sourcecode:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px aqua;
+}

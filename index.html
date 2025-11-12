@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorex - Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <section class="Main">
+      <h1>Welcome To Lorex</h1>
+      <b>Just Type in The URL and Go To The Site</b>
+    </section>
+
+    <!-- Source Code link -->
+    <a id="sourcecode" href="https://github.com/your-repo" target="_blank">Source Code</a>
+
+    <!-- URL form -->
+    <form onsubmit="goToSite(event)">
+      <input id="urlInput" type="text" placeholder="e.g https://google.com/">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+
+  <script>
+    function goToSite(event) {
+      event.preventDefault();
+      let url = document.getElementById("urlInput").value.trim();
+      if (!url.startsWith("http")) {
+        url = "https://" + url;
+      }
+      console.log("Setting Site To: " + url);
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
